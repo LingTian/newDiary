@@ -22,7 +22,7 @@ class DiaryMonthCollectionViewController: UICollectionViewController {
         self.collectionView?.setCollectionViewLayout(layout, animated:false)
         
         yearLabel = DiaryLabel(
-            fontname:"TpldKhangXiDictTrial",
+            fontname:"Wyue-GutiFangsong-NC",
             labelText:"二零一五年",
             fontSize:16.0,
             lineHeight:5.0,
@@ -37,7 +37,7 @@ class DiaryMonthCollectionViewController: UICollectionViewController {
         self.view.addSubview(yearLabel)
         
         monthLabel = DiaryLabel(
-            fontname:"TpldKhangXiDictTrial",
+            fontname:"Wyue-GutiFangsong-NC",
             labelText:"三月",
             fontSize:16.0,
             lineHeight:5.0,

@@ -17,7 +17,7 @@ func diaryButtonWith(text:String,
     let button = UIButton(type: UIButtonType.custom)
     button.frame=CGRect(x:0,y:0,width:width,height:width)
     
-    let font = UIFont(name:"TpldKhangXiDictTrial",size:fontSize)as UIFont!
+    let font = UIFont(name:"Wyue-GutiFangsong-NC",size:fontSize)as UIFont!
     
     let textAttributes:[NSAttributedStringKey:AnyObject]=[NSAttributedStringKey.font: font!,  NSAttributedStringKey.foregroundColor:UIColor.white]
     

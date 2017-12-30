@@ -24,7 +24,7 @@ class DiaryCell: UICollectionViewCell {
             super.awakeFromNib()
        
             self.textLabel=DiaryLabel(
-                fontname:"TpldKhangXiDictTrial",
+                fontname:"Wyue-GutiFangsong-NC",
                 labelText:self.labelText,
                 fontSize:16.0,
                 lineHeight:5.0,

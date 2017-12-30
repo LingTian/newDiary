@@ -17,10 +17,25 @@ let collectionViewWidth=itemWidth*3
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-  
+   /* func PrintFonts() {
+        
+        let familyNames = UIFont.familyNames
+        var index:Int = 0
+        for familyName in familyNames
+        {
+            let fontNames = UIFont.fontNames(forFamilyName: familyName as String)
+            let fontNames1 = UIFont.fontNames(forFamilyName: familyName as String)
+            
+            for fontName in fontNames
+            {
+                index += 1
+                print("序号\(index):\(fontName)")
+            }
+        }
+    }*/
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-       
+       //PrintFonts()
         return true
     }
 
