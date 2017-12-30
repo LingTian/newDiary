@@ -37,10 +37,8 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string></string>
 		<string>TpldKhangXiDictTrial.otf</string>
-		<string>wuyue.otf</string>
-		<string></string>
+		<string>Wyue-GutiFangsong-NC_deliverable.otf</string>
 		<string></string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>

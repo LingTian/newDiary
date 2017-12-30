@@ -10,12 +10,15 @@
 		581785E91FF619DA00187A76 /* DiaryYearCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581785E81FF619DA00187A76 /* DiaryYearCollectionViewController.swift */; };
 		581785EB1FF61B3500187A76 /* DiaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581785EA1FF61B3500187A76 /* DiaryCell.swift */; };
 		5828B9BC1FF679F400A07DBF /* DiaryMonthCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5828B9BB1FF679F400A07DBF /* DiaryMonthCollectionViewController.swift */; };
-		5828B9BF1FF6870D00A07DBF /* wuyue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5828B9BE1FF6870D00A07DBF /* wuyue.otf */; };
-		584CD2D71FF4F0F300E0C02F /* TpldKhangXiDictTrial.otf in Resources */ = {isa = PBXBuildFile; fileRef = 584CD2D61FF4F0F300E0C02F /* TpldKhangXiDictTrial.otf */; };
 		584CD2D91FF5105500E0C02F /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584CD2D81FF5105500E0C02F /* HomeCollectionViewController.swift */; };
 		584CD2DB1FF5113100E0C02F /* HomeYearCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584CD2DA1FF5113100E0C02F /* HomeYearCollectionViewCell.swift */; };
 		584CD2DD1FF513F300E0C02F /* DiaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584CD2DC1FF513F300E0C02F /* DiaryLabel.swift */; };
 		584CD2DF1FF5196800E0C02F /* DiaryLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584CD2DE1FF5196800E0C02F /* DiaryLayout.swift */; };
+		587B895E1FF724B4004A2F05 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B895D1FF724B4004A2F05 /* Helper.swift */; };
+		587B898B1FF7310E004A2F05 /* btn_hl.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 587B89891FF7310E004A2F05 /* btn_hl.pdf */; };
+		587B898C1FF7310E004A2F05 /* btn_normal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 587B898A1FF7310E004A2F05 /* btn_normal.pdf */; };
+		587B899A1FF74253004A2F05 /* TpldKhangXiDictTrial.otf in Resources */ = {isa = PBXBuildFile; fileRef = 587B89981FF74252004A2F05 /* TpldKhangXiDictTrial.otf */; };
+		587B899B1FF7431C004A2F05 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58F8F3051FF3B99800BD71CD /* Info.plist */; };
 		58F8F2F71FF3B99800BD71CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F8F2F61FF3B99800BD71CD /* AppDelegate.swift */; };
 		58F8F2F91FF3B99800BD71CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F8F2F81FF3B99800BD71CD /* ViewController.swift */; };
 		58F8F2FC1FF3B99800BD71CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58F8F2FA1FF3B99800BD71CD /* Main.storyboard */; };
@@ -48,12 +51,14 @@
 		581785E81FF619DA00187A76 /* DiaryYearCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryYearCollectionViewController.swift; sourceTree = "<group>"; };
 		581785EA1FF61B3500187A76 /* DiaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryCell.swift; sourceTree = "<group>"; };
 		5828B9BB1FF679F400A07DBF /* DiaryMonthCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryMonthCollectionViewController.swift; sourceTree = "<group>"; };
-		5828B9BE1FF6870D00A07DBF /* wuyue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = wuyue.otf; sourceTree = "<group>"; };
-		584CD2D61FF4F0F300E0C02F /* TpldKhangXiDictTrial.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TpldKhangXiDictTrial.otf; sourceTree = "<group>"; };
 		584CD2D81FF5105500E0C02F /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		584CD2DA1FF5113100E0C02F /* HomeYearCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeYearCollectionViewCell.swift; sourceTree = "<group>"; };
 		584CD2DC1FF513F300E0C02F /* DiaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryLabel.swift; sourceTree = "<group>"; };
 		584CD2DE1FF5196800E0C02F /* DiaryLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryLayout.swift; sourceTree = "<group>"; };
+		587B895D1FF724B4004A2F05 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		587B89891FF7310E004A2F05 /* btn_hl.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = btn_hl.pdf; sourceTree = "<group>"; };
+		587B898A1FF7310E004A2F05 /* btn_normal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = btn_normal.pdf; sourceTree = "<group>"; };
+		587B89981FF74252004A2F05 /* TpldKhangXiDictTrial.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TpldKhangXiDictTrial.otf; sourceTree = "<group>"; };
 		58F8F2F31FF3B99800BD71CD /* firstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F8F2F61FF3B99800BD71CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58F8F2F81FF3B99800BD71CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +104,7 @@
 		58F8F2EA1FF3B99800BD71CD = {
 			isa = PBXGroup;
 			children = (
+				587B895D1FF724B4004A2F05 /* Helper.swift */,
 				58F8F2F51FF3B99800BD71CD /* firstApp */,
 				58F8F30D1FF3B99800BD71CD /* firstAppTests */,
 				58F8F3181FF3B99800BD71CD /* firstAppUITests */,
@@ -123,6 +129,7 @@
 				58F8F2F61FF3B99800BD71CD /* AppDelegate.swift */,
 				58F8F2F81FF3B99800BD71CD /* ViewController.swift */,
 				58F8F2FA1FF3B99800BD71CD /* Main.storyboard */,
+				587B89981FF74252004A2F05 /* TpldKhangXiDictTrial.otf */,
 				584CD2D81FF5105500E0C02F /* HomeCollectionViewController.swift */,
 				581785E81FF619DA00187A76 /* DiaryYearCollectionViewController.swift */,
 				5828B9BB1FF679F400A07DBF /* DiaryMonthCollectionViewController.swift */,
@@ -130,8 +137,8 @@
 				584CD2DC1FF513F300E0C02F /* DiaryLabel.swift */,
 				584CD2DE1FF5196800E0C02F /* DiaryLayout.swift */,
 				58F8F3001FF3B99800BD71CD /* Assets.xcassets */,
-				584CD2D61FF4F0F300E0C02F /* TpldKhangXiDictTrial.otf */,
-				5828B9BE1FF6870D00A07DBF /* wuyue.otf */,
+				587B89891FF7310E004A2F05 /* btn_hl.pdf */,
+				587B898A1FF7310E004A2F05 /* btn_normal.pdf */,
 				58F8F3271FF3BBD400BD71CD /* Artboard.png */,
 				58F8F3021FF3B99800BD71CD /* LaunchScreen.storyboard */,
 				58F8F3051FF3B99800BD71CD /* Info.plist */,
@@ -266,10 +273,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				58F8F3041FF3B99800BD71CD /* LaunchScreen.storyboard in Resources */,
-				5828B9BF1FF6870D00A07DBF /* wuyue.otf in Resources */,
+				587B898B1FF7310E004A2F05 /* btn_hl.pdf in Resources */,
+				587B899B1FF7431C004A2F05 /* Info.plist in Resources */,
 				58F8F3011FF3B99800BD71CD /* Assets.xcassets in Resources */,
+				587B898C1FF7310E004A2F05 /* btn_normal.pdf in Resources */,
+				587B899A1FF74253004A2F05 /* TpldKhangXiDictTrial.otf in Resources */,
 				58F8F3281FF3BBD400BD71CD /* Artboard.png in Resources */,
-				584CD2D71FF4F0F300E0C02F /* TpldKhangXiDictTrial.otf in Resources */,
 				58F8F2FC1FF3B99800BD71CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				587B895E1FF724B4004A2F05 /* Helper.swift in Sources */,
 				58F8F2F91FF3B99800BD71CD /* ViewController.swift in Sources */,
 				584CD2DF1FF5196800E0C02F /* DiaryLayout.swift in Sources */,
 				584CD2D91FF5105500E0C02F /* HomeCollectionViewController.swift in Sources */,
@@ -471,6 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3P6CRHJZT2;
 				INFOPLIST_FILE = firstApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.menca.Spider.firstApp;
@@ -485,6 +496,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3P6CRHJZT2;
 				INFOPLIST_FILE = firstApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.menca.Spider.firstApp;

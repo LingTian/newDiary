@@ -51,6 +51,17 @@ class DiaryMonthCollectionViewController: UICollectionViewController {
         )
         self.view.addSubview(monthLabel)
         
+        //btn
+        let composeButton = diaryButtonWith(
+            text:"撰",
+            fontSize:14.0,
+            width:40.0,
+            normalImageName:"btn_normal",
+            highlightedImageName:"btn_hl"
+                                            )
+        
+        composeButton.center = CGPoint(x:yearLabel.center.x,y:38+yearLabel.frame.size.height+26.0/2.0)
+        self.view.addSubview(composeButton)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
