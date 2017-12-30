@@ -8,6 +8,7 @@
 
 import UIKit
 
+private let reuseIdentifier = "Cell"
 
 class DiaryYearCollectionViewController: UICollectionViewController {
     var year:Int!
