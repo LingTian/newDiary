@@ -20,6 +20,7 @@
 		587B899A1FF74253004A2F05 /* TpldKhangXiDictTrial.otf in Resources */ = {isa = PBXBuildFile; fileRef = 587B89981FF74252004A2F05 /* TpldKhangXiDictTrial.otf */; };
 		587B899B1FF7431C004A2F05 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58F8F3051FF3B99800BD71CD /* Info.plist */; };
 		587B899F1FF745C9004A2F05 /* Wyue-GutiFangsong-NC_deliverable.otf in Resources */ = {isa = PBXBuildFile; fileRef = 587B899D1FF74569004A2F05 /* Wyue-GutiFangsong-NC_deliverable.otf */; };
+		587B89A11FF90B6B004A2F05 /* DiaryAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B89A01FF90B6B004A2F05 /* DiaryAnimator.swift */; };
 		58F8F2F71FF3B99800BD71CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F8F2F61FF3B99800BD71CD /* AppDelegate.swift */; };
 		58F8F2F91FF3B99800BD71CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F8F2F81FF3B99800BD71CD /* ViewController.swift */; };
 		58F8F2FC1FF3B99800BD71CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58F8F2FA1FF3B99800BD71CD /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		587B898A1FF7310E004A2F05 /* btn_normal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = btn_normal.pdf; sourceTree = "<group>"; };
 		587B89981FF74252004A2F05 /* TpldKhangXiDictTrial.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TpldKhangXiDictTrial.otf; sourceTree = "<group>"; };
 		587B899D1FF74569004A2F05 /* Wyue-GutiFangsong-NC_deliverable.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wyue-GutiFangsong-NC_deliverable.otf"; sourceTree = "<group>"; };
+		587B89A01FF90B6B004A2F05 /* DiaryAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAnimator.swift; sourceTree = "<group>"; };
 		58F8F2F31FF3B99800BD71CD /* firstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F8F2F61FF3B99800BD71CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58F8F2F81FF3B99800BD71CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				58F8F2FA1FF3B99800BD71CD /* Main.storyboard */,
 				587B89981FF74252004A2F05 /* TpldKhangXiDictTrial.otf */,
 				584CD2D81FF5105500E0C02F /* HomeCollectionViewController.swift */,
+				587B89A01FF90B6B004A2F05 /* DiaryAnimator.swift */,
 				587B899D1FF74569004A2F05 /* Wyue-GutiFangsong-NC_deliverable.otf */,
 				581785E81FF619DA00187A76 /* DiaryYearCollectionViewController.swift */,
 				5828B9BB1FF679F400A07DBF /* DiaryMonthCollectionViewController.swift */,
@@ -318,6 +321,7 @@
 				58F8F2F71FF3B99800BD71CD /* AppDelegate.swift in Sources */,
 				58F8F2FF1FF3B99800BD71CD /* firstApp.xcdatamodeld in Sources */,
 				584CD2DB1FF5113100E0C02F /* HomeYearCollectionViewCell.swift in Sources */,
+				587B89A11FF90B6B004A2F05 /* DiaryAnimator.swift in Sources */,
 				581785E91FF619DA00187A76 /* DiaryYearCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,6 +21,8 @@ class HomeCollectionViewController: UICollectionViewController {
         
         yearLayout.scrollDirection = UICollectionViewScrollDirection.horizontal
         self.collectionView?.setCollectionViewLayout(yearLayout, animated: false)
+        
+        self.navigationController!.delegate = self
         // Register cell classes
        // self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
@@ -109,4 +111,13 @@ class HomeCollectionViewController: UICollectionViewController {
     }
     */
 
+}
+
+extension HomeCollectionViewController:UINavigationControllerDelegate{
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC:UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let animator = DiaryAnimator()
+        animator.operation = operation
+        return animator
+    }
 }
