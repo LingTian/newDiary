@@ -8,7 +8,9 @@
 
 import UIKit
 import CoreData
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
+let managedContext = appDelegate.managedObjectContext!
 let itemHeight:CGFloat=150.0
 let itemWidth:CGFloat=60
 let collectionViewWidth=itemWidth*3
@@ -38,7 +40,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        //PrintFonts()
         return true
     }
-
+    lazy var managedObjectmodel:NSManagedObjectModel = {
+        
+        let modelURL = Bundle.main.url(forResource: "Diary", withExtension: "momd")!
+        return NSManagedObjectModel(contentsOf:modelURL)!
+    }()
+    
+    lazy var applicationDocumentsDirectory:URL = {
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return urls[urls.count-1]
+    }()
+    
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -62,7 +75,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
-
+    
+    lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
+        // 通过 managedObjectModel 创建持久化管理
+        var coordinator: NSPersistentStoreCoordinator? =
+            NSPersistentStoreCoordinator(managedObjectModel:
+                self.managedObjectmodel)
+        
+        let url = self.applicationDocumentsDirectory.appendingPathComponent("Diary.sqlite")
+        // 设定数据库存储位置
+        
+        var error: NSError? = nil
+        var failureReason = "载入程序存储的数据出错."
+        
+        do {
+            try coordinator!.addPersistentStore(
+                ofType: NSSQLiteStoreType, configurationName: nil,
+                at: url, options: nil)
+            // 创建NSSQLiteStoreType类型持久化存储
+        } catch var error1 as NSError {
+            error = error1
+            coordinator = nil
+            // 报告错误
+            var dict = [String: AnyObject]()
+            dict[NSLocalizedDescriptionKey] = "无法初始化程序存储的数据" as AnyObject?
+            dict[NSLocalizedFailureReasonErrorKey] = failureReason as AnyObject?
+            dict[NSUnderlyingErrorKey] = error
+            error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
+            NSLog("发现错误 \(String(describing: error)), \(error!.userInfo)")
+            abort()
+        } catch {
+            fatalError()
+        }
+        
+        return coordinator
+    }()
+    
+    lazy var managedObjectContext: NSManagedObjectContext? = {
+        let coordinator = self.persistentStoreCoordinator
+        if coordinator == nil {
+            return nil
+        }
+        var managedObjectContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        managedObjectContext.persistentStoreCoordinator = coordinator
+        return managedObjectContext
+    }()
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {

@@ -59,7 +59,7 @@ class DiaryMonthCollectionViewController: UICollectionViewController {
             normalImageName:"btn_normal",
             highlightedImageName:"btn_hl"
                                             )
-        
+        composeButton.addTarget(self, action: #selector(newCompose), for: UIControlEvents.touchUpInside)
         composeButton.center = CGPoint(x:yearLabel.center.x,y:38+yearLabel.frame.size.height+26.0/2.0)
         self.view.addSubview(composeButton)
         // Uncomment the following line to preserve selection between presentations
@@ -150,5 +150,10 @@ class DiaryMonthCollectionViewController: UICollectionViewController {
     
     }
     */
-
+    @objc func newCompose(){
+        let identifier = "DiaryComposeViewController"
+        let composeViewController = self.storyboard?.instantiateViewController(withIdentifier: identifier) as! DiaryComposeViewController
+        self.present(composeViewController,animated: true,completion: nil)
+        
+    }
 }
