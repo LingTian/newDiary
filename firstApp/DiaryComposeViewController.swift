@@ -19,6 +19,9 @@ let DiaryLocationFont = UIFont(name: defaultFont, size: 16) as UIFont!
 let DiaryTitleFont = UIFont(name: defaultFont, size: 18) as UIFont!
 
 class DiaryComposeViewController: UIViewController {
+    var diary: Diary?
+
+    
     var composeView:UITextView!
     var locationTextView:UITextView!
     var titleTextView:UITextView!

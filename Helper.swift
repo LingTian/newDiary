@@ -32,13 +32,37 @@ func diaryButtonWith(text:String,
 }
 
 func numberToChinese(_ number:Int) -> String {
-    let numbers = Array(String(number).characters)
+    let numbers = Array(String(number))
     var finalString = ""
     for singleNumber in numbers {
         let string = singleNumberToChinese(singleNumber)
         finalString = "\(finalString)\(string)"
     }
     return finalString
+}
+
+func numberToChineseWithUnit(_ number:Int) -> String {
+    let numbers = Array(String(number))
+    var units = unitParser(numbers.count)
+    var finalString = ""
+    
+    for (index, singleNumber) in numbers.enumerated() {
+        let string = singleNumberToChinese(singleNumber)
+        if (!(string == "零" && (index+1) == numbers.count)){
+            finalString = "\(finalString)\(string)\(units[index])"
+        }
+    }
+    
+    return finalString
+}
+
+func unitParser(_ unit:Int) -> [String] {
+    
+    var units = Array(["万","千","百","十",""].reversed())
+    let parsedUnits = units[0..<(unit)].reversed()
+    let slicedUnits: ArraySlice<String> = ArraySlice(parsedUnits)
+    let final: [String] = Array(slicedUnits)
+    return final
 }
 
 func singleNumberToChinese(_ number:Character) -> String {

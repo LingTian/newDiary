@@ -7,19 +7,67 @@
 //
 
 import UIKit
-
+import CoreData
 private let reuseIdentifier = "Cell"
 
 class DiaryYearCollectionViewController: UICollectionViewController {
-    var year:Int!
+    
+    var year : Int!
+    var diarys = [Diary]()
+    var fetchedResultsController: NSFetchedResultsController<Diary>!
+    var monthCount: Int = 1
+    var sectionsCount: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let layout=DiaryLayout()
+        //let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(DiaryYearCollectionViewController.back))
+      /*  let moreTap = UITapGestureRecognizer.init(target:self, action: #selector(DiaryYearCollectionViewController.back))
+        moreTap.numberOfTapsRequired = 2//触发响应的点击次数
+        // 这句可有可无, 因为默认方向就是Right
+        //rightSwipe.direction = .Right
         
+        // 添加手势到需要响应的视图
+        self.view.addGestureRecognizer(moreTap)*/
+        addGester()
         layout.scrollDirection=UICollectionViewScrollDirection.horizontal
         self.collectionView?.setCollectionViewLayout(layout, animated:false)
         
+        do {
+            // 新建查询
+            let fetchRequest = NSFetchRequest<Diary>(entityName:"Diary")
+            
+            //filter
+            fetchRequest.predicate = NSPredicate(format: "year = \(year!)")
+            
+            // 排序方式
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "created_at", ascending: true)]
+            
+            fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
+                                                                  managedObjectContext: managedContext, sectionNameKeyPath: "month",
+                                                                  cacheName: nil)
+            
+            // 尝试查询
+            try self.fetchedResultsController.performFetch()
+            
+            if (fetchedResultsController.fetchedObjects!.count == 0){
+                print("没有存储结果")
+            }else{
+                
+                if let sectionsCount = fetchedResultsController.sections?.count {
+                    
+                    monthCount = sectionsCount
+                    diarys = fetchedResultsController.fetchedObjects!
+                    
+                }else {
+                    sectionsCount = 0
+                    monthCount = 1
+                }
+            }
+            
+        } catch let error as NSError {
+            NSLog("发现错误 \(error.localizedDescription)")
+        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -49,7 +97,7 @@ class DiaryYearCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return monthCount
     }
 
 
@@ -61,8 +109,20 @@ class DiaryYearCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let identifier="DiaryCell"
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)as! DiaryCell
-    cell.textInt=1
-        cell.labelText="一月"
+
+        let components = Calendar.current.component(Calendar.Component.month, from: Date())
+        var month = components
+        
+        if sectionsCount > 0 {
+            let sectionInfo = fetchedResultsController.sections![indexPath.section]
+            print("分组信息\(sectionInfo.name)")
+            month = Int(sectionInfo.name)!
+            
+            
+        }
+        
+        cell.textInt=month
+        cell.labelText="\(numberToChinese(cell.textInt)) 月"
         
         // Configure the cell
     
@@ -70,11 +130,20 @@ class DiaryYearCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath:IndexPath) {
-        
+        let components = Calendar.current.component(Calendar.Component.month, from: Date())
         let identifier="DiaryMonthCollectionViewController"
         let dvc = self.storyboard?.instantiateViewController(withIdentifier: identifier)as! DiaryMonthCollectionViewController
+        var month = components
         
-        dvc.month=1
+        if sectionsCount > 0 {
+            let sectionInfo = fetchedResultsController.sections![indexPath.section]
+            print("分组信息\(sectionInfo.name)")
+            month = Int(sectionInfo.name)!
+            
+            
+        }
+        dvc.month = month
+        dvc.year = year
         self.navigationController!.pushViewController(dvc, animated: true)
         
     }
@@ -109,5 +178,15 @@ class DiaryYearCollectionViewController: UICollectionViewController {
     
     }
     */
-
+    func addGester(){
+        let moreTap = UITapGestureRecognizer.init(target:self, action: #selector(DiaryYearCollectionViewController.back))
+        moreTap.numberOfTapsRequired = 2//触发响应的点击次数
+        self.view.addGestureRecognizer(moreTap)
+        
+        
+    }
+    @objc func back()
+    {
+        self.navigationController?.popViewController(animated: true)
+    }
 }

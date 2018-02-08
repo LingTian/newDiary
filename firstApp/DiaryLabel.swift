@@ -57,7 +57,34 @@ class DiaryLabel: UILabel {
         self.lineBreakMode = NSLineBreakMode.byCharWrapping
         self.numberOfLines = 0
     }
+    /*
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // 使用Pop对其进行缩放
+        let anim = POPSpringAnimation(propertyNamed:
+            kPOPLayerScaleXY)
+        anim?.springBounciness = 10
+        anim?.springSpeed = 15
+        anim?.fromValue = NSValue(cgPoint: CGPoint(x: 1.0, y: 1.0))
+        anim?.toValue = NSValue(cgPoint: CGPoint(x: 0.9, y: 0.9))
+        self.layer.pop_add(anim, forKey: "PopScale")
+        
+        super.touchesBegan(touches,
+                           with: event)
+    }
     
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // 使用Pop对其进行缩放
+        let anim = POPSpringAnimation(propertyNamed:
+            kPOPLayerScaleXY)
+        anim?.springBounciness = 10
+        anim?.springSpeed = 15
+        anim?.fromValue = NSValue(cgPoint: CGPoint(x: 0.9, y: 0.9))
+        anim?.toValue = NSValue(cgPoint: CGPoint(x: 1.0, y: 1.0))
+        self.layer.pop_add(anim, forKey: "PopScale")
+        
+        super.touchesEnded(touches,
+                           with: event)
+    }*/
     func updateText(labelText: String) {
         
         let labelSize = sizeHeightWithText(labelText: labelText,
